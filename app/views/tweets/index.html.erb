@@ -1,18 +1,9 @@
 <div class="contents row" >
   <% @tweets.each do |tweet| %>
-    <p><%= tweet.text %></p>
+  <div class="content_post" style="background-image: url(<%= tweet.image %>);">
+		<%= simple_format(tweet.text) %>
+        <span class="name"><%= tweet.name %></span>
+	</div>
   <% end %>
 </div>
 
-<<!DOCTYPE html>
-<html>
-<head>
-	<title>shimabukuro</title>
-</head>
-<body>
-
-	<p><<strong>shimabukuro</strong>yuki</p>
-	<a href="mailto:joe@example.com?subject=feedback" "email me">email me</a>
-
-</body>
-</html>
